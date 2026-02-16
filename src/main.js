@@ -1,6 +1,6 @@
 import { getImagesByQuery } from './js/pixabay-api.js';
 import {
-  markupGallery,
+  createGallery,
   clearGallery,
   showLoader,
   hideLoader,
@@ -45,7 +45,7 @@ function onFormSubmit(e) {
             'Sorry, there are no images matching your search query. Please try again!',
         });
       }
-      markupGallery(images.hits);
+      createGallery(images.hits);
     })
     .catch(AxiosError => {
       iziToast.error({

@@ -6,7 +6,7 @@ import 'izitoast/dist/css/iziToast.min.css';
 const SimpleLightbox = SimpleLightboxModule.default || SimpleLightboxModule;
 let lightbox;
 
-export function markupGallery(images) {
+export function createGallery(images) {
   const galleryContainer = document.querySelector('.gallery');
   const galleryMarkup = images
     .map(
